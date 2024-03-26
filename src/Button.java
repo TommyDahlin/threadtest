@@ -19,6 +19,7 @@ public class Button extends JPanel implements ActionListener {
         b2 = new JButton("Middle button", upButtonIcon);
         b2.setVerticalTextPosition(AbstractButton.BOTTOM);
         b2.setHorizontalTextPosition(AbstractButton.CENTER);
+        b2.setActionCommand("clicked");
         b2.setMnemonic(KeyEvent.VK_M);
 
         b3 = new JButton("Enable middle button", rightButtonIcon);
@@ -27,10 +28,12 @@ public class Button extends JPanel implements ActionListener {
         b3.setEnabled(false);
 
         b1.addActionListener(this);
+        b2.addActionListener(this);
         b3.addActionListener(this);
 
-        b1.setToolTipText("Click this button to disable the middle button");
-        b3.setToolTipText("Click this button to enable the middle button");
+        b1.setToolTipText("Click this button to disable the middle button.");
+        b2.setToolTipText("Click this button to click this button.");
+        b3.setToolTipText("Click this button to enable the middle button.");
 
         add(b1);
         add(b2);
